@@ -1,37 +1,37 @@
 [
-{
-    "id":1,
-    "name":"DashBoard",
-    "icon":"url"
- },
- {
-    "id":2,
-    "name":"Asset",
-    "icon":"url"
- },
- {
-    "id":3,
-    "name":"Transaction hall",
-    "icon":"url"
- },
- {
-    "id":4,
-    "name":"abc",
-    "icon":"Personal Info"
- },
- {
-    "id":5,
-    "name":"KYC",
-    "icon":"url"
- },
- {
-    "id":6,
-    "name":"My Team",
-    "icon":"url"
- },
- {
-    "id":7,
-    "name":"Setting",
-    "icon":"url"
- }
+  {
+    "id": 1,
+    "name": "DashBoard",
+    "icon": "/../public/images/dashboard.png"
+  },
+  {
+    "id": 2,
+    "name": "Asset",
+    "icon": "/../public/images/wallet-with-card.png"
+  },
+  {
+    "id": 3,
+    "name": "Transaction hall",
+    "icon": "/../public/images/credit-card.png"
+  },
+  {
+    "id": 4,
+    "name": "Personal Info",
+    "icon": "/../public/images/person.png"
+  },
+  {
+    "id": 5,
+    "name": "KYC",
+    "icon": "/../public/images/share.png"
+  },
+  {
+    "id": 6,
+    "name": "My Team",
+    "icon": "/../public/images/user.png"
+  },
+  {
+    "id": 7,
+    "name": "Setting",
+    "icon": "/../public/images/settings.png"
+  }
 ]
