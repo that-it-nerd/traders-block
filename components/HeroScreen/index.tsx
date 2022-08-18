@@ -2,10 +2,16 @@ import React, { useState } from 'react';
 import Card from '../Cards';
 import DashBoard from '../DashBoard/index';
 import TopBar from '../TopBar';
+import User from '../../JSON/User.json'
 import styles from './heroScreen.module.scss';
 interface Data {
 	name: string;
 	age: number;
+}
+interface User{
+	id:number;
+	name:string;
+	icon:string;
 }
 const HeroScreen = () => {
 	const [data, setData] = useState<Data>({
@@ -15,7 +21,7 @@ const HeroScreen = () => {
 	return (
 		<div className={`basis-5/7 ${styles.heroScreen}`}>
 			<div className={styles.nav_bar}>
-				<TopBar />
+				<TopBar user={User} />
 			</div>
 			<div className={styles.cards_container}>
 				<Card type={'card'} />

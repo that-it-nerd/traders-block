@@ -1,3 +1,41 @@
-.card{
-    width: 100%;
+.card {
+	width: 100%;
+	background-color: var(--darkTertiary);
+	padding: 40px;
+	margin: 0 10px 20px 10px;
+	border-radius: 10px;
+    box-shadow: 3px 3px var(--dark);
+
+	.card_content {
+		.income_section {
+			display: flex;
+			align-items: center;
+			margin: 0 -15px -20px -15px;
+
+			justify-content: center;
+			.income_content {
+				margin: 0 15px 20px 15px;
+				width: 100%;
+				background-color: var(--darkQuaternary);
+				padding: 20px;
+                border-radius: 10px;
+                box-shadow: 3px 3px var(--darkSecondary);
+			}
+		}
+		button {
+			background-color: var(--blue);
+			color: var(--light);
+            width: 100%;
+			margin: 20px 0px 0px;
+			padding: 10px;
+            border-radius: 10px;
+		}
+	}
+    .custom_table{
+        border-collapse: collapse;
+        width: 100%;
+        th{
+            text-align: left;
+        }
+    }
 }

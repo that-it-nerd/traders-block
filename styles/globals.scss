@@ -2,9 +2,12 @@
 :root {
   --dark: #1b263c;
   --darkSecondary: #28344e;
+  --darkTertiary:#2a3a5e;
+  --darkQuaternary:#334877;
   --darkFont: #ffffff;
   --light: #e7e7e7;
   --lightFont: #020202;
+  --blue:#608cf7;
 }
 
 html,
@@ -50,4 +53,13 @@ a {
   height: 100vh;
   width: 100% !important;
   padding: 30px 20px !important;
+}
+.bold{
+  font-weight: 600;
+}
+.normal{
+  font-weight: 500;
+}
+.regular{
+  font-weight: 400;
 }

@@ -21,6 +21,9 @@
       padding: 10px 0;
       span {
         margin-right: 10px !important;
+        img{
+          object-fit: contain;
+        }
       }
     }
   }

@@ -1,11 +1,16 @@
 import React from 'react'
 import styles from './topBar.module.scss'
-const TopBar = () => {
+interface User{
+	id:number;
+	name:string;
+	icon:string;
+}
+const TopBar:React.FC<User> = ({user}) => {
   return (
     <div className={styles.top_bar}>
         <div className={styles.search_container}>
         <input type="text"  />
-        <span className={styles.icon}>icon</span>
+        <span className={styles.icon}><img src="../../../public/images/userImage.png"  alt="" /></span>
         </div>
         <div>
             Bell
