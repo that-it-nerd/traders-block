@@ -9,7 +9,7 @@ interface Data{
   age:number;
 }
 const Home: NextPage = () => {
-  const [data,setData]= useState<object>({
+  const [data,setData]= useState<Data>({
     name:"John",
     age:30,
   })

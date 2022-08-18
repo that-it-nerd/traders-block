@@ -6,8 +6,7 @@ interface Data{
 }
 interface Props {
 	data: Data;
-	setData: React.Dispatch<React.SetStateAction<object>>;
-	// children?: JSX.Element|JSX.Element[];
+	setData: React.Dispatch<React.SetStateAction<Data>>;
 }
 
 const DashBoard: React.FC<Props> = ({ data, setData }) => {
