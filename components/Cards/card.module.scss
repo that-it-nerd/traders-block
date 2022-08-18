@@ -4,7 +4,7 @@
 	padding: 40px;
 	margin: 0 10px 20px 10px;
 	border-radius: 10px;
-    box-shadow: 3px 3px var(--dark);
+	box-shadow: 3px 3px var(--dark);
 
 	.card_content {
 		.income_section {
@@ -18,24 +18,41 @@
 				width: 100%;
 				background-color: var(--darkQuaternary);
 				padding: 20px;
-                border-radius: 10px;
-                box-shadow: 3px 3px var(--darkSecondary);
+				border-radius: 10px;
+				box-shadow: 3px 3px var(--darkSecondary);
 			}
 		}
 		button {
 			background-color: var(--blue);
 			color: var(--light);
-            width: 100%;
+			width: 100%;
 			margin: 20px 0px 0px;
 			padding: 10px;
-            border-radius: 10px;
+			border-radius: 10px;
 		}
 	}
-    .custom_table{
-        border-collapse: collapse;
-        width: 100%;
-        th{
-            text-align: left;
-        }
-    }
+	.custom_table {
+		// border-collapse: collapse;
+		width: 100%;
+		thead {
+			border-bottom: 1px solid var(--darkFont);
+		}
+		th {
+			text-align: left;
+			padding-bottom: 10px;
+		}
+		tr {
+			td {
+				padding: 10px;
+			}
+			&:last-child {
+				border-bottom: 1px solid var(--darkFont);
+				td {
+					padding-bottom: 20px;
+				}
+			}
+		}
+		td {
+		}
+	}
 }

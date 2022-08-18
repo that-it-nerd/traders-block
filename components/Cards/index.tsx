@@ -22,7 +22,7 @@ const Card: React.FC<Props> = ({ type }) => {
 				</div>
 			)}
 			{type === 'table' && (
-				<table className={`table-fixed ${styles.custom_table}`}>
+				<table className={`table-fixed border-spacing-4 ${styles.custom_table}`}>
 					<thead>
 						<tr>
 							<th>Song</th>

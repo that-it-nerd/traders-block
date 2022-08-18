@@ -10,13 +10,13 @@ const TopBar = () => {
     <div className={styles.top_bar}>
         <div className={styles.search_container}>
         <input type="text"  />
-        <span className={styles.icon}><img src="../../../public/images/userImage.png"  alt="" /></span>
+        <span className={styles.icon}><img src='/images/search.png' /></span>
         </div>
-        <div>
-            Bell
+        <div className={styles.bell_icon}>
+        <img src='/images/bell.png' />
         </div>
-        <div>
-            <span>userImage</span><span>Username</span>
+        <div className={styles.user}>
+            <span className={styles.user_image_container}><img className={styles.user_image} src='/images/userImage.png' /></span><span>Username</span>
         </div>
     </div>
   )
