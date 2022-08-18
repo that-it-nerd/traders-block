@@ -1,0 +1,19 @@
+
+.sidebar{
+    margin-right: 10px;
+    width: 10%;
+    min-width: 200px;
+    .title_block{
+        border-bottom: 2px solid var(--darkFont);
+        padding-bottom: 10px;
+    }
+    .tabs_list{
+        border-bottom: 2px solid var(--darkFont);
+        li{
+            padding: 10px 0;
+        }
+    }
+    .log_out{
+        margin: 10px 0 0;
+    }
+}

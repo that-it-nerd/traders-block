@@ -1,0 +1,12 @@
+.heroScreen{
+    width: 90%;
+    .nav_bar{
+        float: right;
+    }
+    .cards_container{
+        margin-top: 80px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}

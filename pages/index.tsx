@@ -1,21 +1,30 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import { useState } from 'react'
-import DashBoard from '../components/DashBoard'
-import styles from '../styles/Home.module.css'
-interface Data{
-  name:string;
-  age:number;
-}
-const Home: NextPage = () => {
-  const [data,setData]= useState<Data>({
-    name:"John",
-    age:30,
-  })
-  return (
-    <DashBoard data={data} setData={setData} />
-  )
-}
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import { useState } from 'react';
+import styles from '../styles/Home.module.css';
+import Sidebar from '../components/Sidebar/index';
+import HeroScreen from '../components/HeroScreen';
 
-export default Home
+const Home: NextPage = () => {
+	const [toggle, setToggle] = useState<boolean>(true);
+	return (
+		<div
+			className={`container container-fluid flex flex-row ${
+				toggle ? 'dark' : 'light'
+			}`}
+		>
+			<Sidebar />
+			<HeroScreen />
+			<div
+				onClick={() => {
+					setToggle(!toggle);
+				}}
+			>
+				Toggle
+			</div>
+		</div>
+	);
+};
+
+export default Home;

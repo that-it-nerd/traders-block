@@ -1,0 +1,46 @@
+:root{
+  --dark:#080808;
+  --darkFont:#ffffff;
+  --light:#E7E7E7;
+  --lightFont:#020202;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+    background:var(--dark)!important;
+    color:var(--darkFont)!important;
+}
+.dark{
+  background:var(--dark)!important;
+  color:var(--darkFont)!important;
+}
+.light{
+  background: var(--light)!important;
+  color: var(--lightFont)!important;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+.container-fluid{
+  max-width: 100%!important;
+  height: 100vh;
+  width: 100%!important;
+  padding: 30px 20px!important;
+}

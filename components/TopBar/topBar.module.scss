@@ -1,0 +1,22 @@
+.top_bar{
+    display: flex;
+    align-items: center;
+    div{
+        margin: 0 10px;
+    }
+.search_container{
+    position: relative;
+    input{
+        position: relative;
+        max-width: 200px;
+        height: 30px;
+        border-radius: 30px;
+    }
+    .icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        color:black
+    }
+}
+}
