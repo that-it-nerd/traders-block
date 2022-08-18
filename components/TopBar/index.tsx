@@ -5,7 +5,7 @@ interface User{
 	name:string;
 	icon:string;
 }
-const TopBar:React.FC<User> = ({user}) => {
+const TopBar = () => {
   return (
     <div className={styles.top_bar}>
         <div className={styles.search_container}>

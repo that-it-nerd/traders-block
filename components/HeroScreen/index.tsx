@@ -21,7 +21,7 @@ const HeroScreen = () => {
 	return (
 		<div className={`basis-5/7 ${styles.heroScreen}`}>
 			<div className={styles.nav_bar}>
-				<TopBar user={User} />
+				<TopBar  />
 			</div>
 			<div className={styles.cards_container}>
 				<Card type={'card'} />
