@@ -13,7 +13,11 @@ const Home: NextPage = () => {
     theme = localStorage.getItem("theme");
   }
   return (
-    <div className={`main-wrapper flex flex-row `}>
+    <div
+      className={`main-wrapper flex flex-row ${
+        theme == "light" ? `${styles.light}` : `${styles.dark}`
+      }`}
+    >
       <Sidebar />
       <HeroScreen />
     </div>
