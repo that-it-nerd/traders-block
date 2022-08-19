@@ -18,8 +18,18 @@ const HeroScreen = () => {
     name: "John",
     age: 30,
   });
+  const ISSERVER = typeof window === "undefined";
+  let theme;
+  if (!ISSERVER) {
+    theme = localStorage.getItem("theme");
+  }
+  console.log("theme", theme);
   return (
-    <div className={`basis-5/7 ${styles.heroScreen}`}>
+    <div
+      className={`basis-5/7 ${styles.heroScreen} ${
+        theme === "light" && styles.light
+      }`}
+    >
       <div className={`${styles.nav_bar} flex justify-end`}>
         <TopBar />
       </div>

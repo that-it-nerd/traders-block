@@ -7,8 +7,17 @@ import logoutIcon from "../../public/images/logout.png";
 import brandIcon from "../../public/images/brand.png";
 
 const Sidebar = () => {
+  const ISSERVER = typeof window === "undefined";
+  let theme;
+  if (!ISSERVER) {
+    theme = localStorage.getItem("theme");
+  }
   return (
-    <div className={`basis-2/7 sidebar-wrapper  ${styles.sidebar}`}>
+    <div
+      className={`basis-2/7 sidebar-wrapper  ${styles.sidebar} ${
+        theme === "light" && styles.light
+      }`}
+    >
       <div className={`${styles.title_block} `}>
         <h1 className="flex flex-row ">
           {" "}

@@ -7,8 +7,13 @@ interface Props {
   type: string;
 }
 const Card: React.FC<Props> = ({ type }) => {
+  const ISSERVER = typeof window === "undefined";
+  let theme;
+  if (!ISSERVER) {
+    theme = localStorage.getItem("theme");
+  }
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${theme === "light" && styles.light}`}>
       {type === "card" && (
         <div className={styles.card_content}>
           <div className={styles.income_section}>

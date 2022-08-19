@@ -68,4 +68,26 @@
     td {
     }
   }
+
+  &.light {
+    background-color: var(--lightTertiary);
+    box-shadow: 2px 2px 30px 2px #1b263c1a;
+    .card_content {
+      .income_content {
+        background-color: var(--lightTertiary) !important;
+        box-shadow: 2px 2px 8px 1px #232d4633;
+      }
+      button {
+        background-color: var(--light) !important;
+        color: var(--darkFont) !important;
+      }
+    }
+    h4,
+    h3,
+    p,
+    th,
+    td {
+      color: var(--lightFont);
+    }
+  }
 }
