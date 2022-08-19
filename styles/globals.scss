@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
 :root {
   --dark: #1b263c;
-  --darkSecondary: #28344e;
-  --darkTertiary:#2a3a5e;
-  --darkQuaternary:#334877;
+  --darkSecondary: #232d46;
+  --darkTertiary: #28344e;
+  --darkQuaternary: #303c56;
   --darkFont: #ffffff;
   --light: #e7e7e7;
   --lightFont: #020202;
-  --blue:#608cf7;
+  --blue: #608cf7;
 }
 
 html,
@@ -54,12 +54,12 @@ a {
   width: 100% !important;
   padding: 30px 20px !important;
 }
-.bold{
+.bold {
   font-weight: 600;
 }
-.normal{
+.normal {
   font-weight: 500;
 }
-.regular{
+.regular {
   font-weight: 400;
 }

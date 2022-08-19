@@ -1,61 +1,81 @@
-import React from 'react';
-import styles from './card.module.scss';
+import React from "react";
+import styles from "./card.module.scss";
+import referralImage from "../../public/images/referral.jpeg";
+import Image from "next/image";
+
 interface Props {
-	type: string;
+  type: string;
 }
 const Card: React.FC<Props> = ({ type }) => {
-	return (
-		<div className={styles.card}>
-			{type === 'card' && (
-				<div className={styles.card_content}>
-					<div className={styles.income_section}>
-						<div className={styles.income_content}>
-							<h4>Total incomes</h4>
-							<h4 className='bold'>612.785</h4>
-						</div>
-						<div className={styles.income_content}>
-							<h4>Residual incomes</h4>
-							<h4 className='bold'>112.785</h4>
-						</div>
-					</div>
-					<button>Receive</button>
-				</div>
-			)}
-			{type === 'table' && (
-				<table className={`table-fixed border-spacing-4 ${styles.custom_table}`}>
-					<thead>
-						<tr>
-							<th>Song</th>
-							<th>Artist</th>
-							<th>Year</th>
-							<th>Time</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-							<td>Malcolm Lockyer</td>
-							<td>1961</td>
-							<td>19:61</td>
-							
-						</tr>
-						<tr>
-							<td>Witchy Woman</td>
-							<td>The Eagles</td>
-							<td>1972</td>
-							<td>19:72</td>
-						</tr>
-						<tr>
-							<td>Shining Star</td>
-							<td>Earth, Wind, and Fire</td>
-							<td>1975</td>
-							<td>19:75</td>
-						</tr>
-					</tbody>
-				</table>
-			)}
-		</div>
-	);
+  return (
+    <div className={styles.card}>
+      {type === "card" && (
+        <div className={styles.card_content}>
+          <div className={styles.income_section}>
+            <div className={styles.income_content}>
+              <h4>Total incomes</h4>
+              <h4 className="bold">612.785</h4>
+            </div>
+            <div className={`${styles.income_content}`}>
+              <h4>Residual incomes</h4>
+              <h4 className="bold">112.785</h4>
+            </div>
+          </div>
+          <button>Receive</button>
+        </div>
+      )}
+      {type === "referral" && (
+        <div className={`${styles.card_content}  ${styles.referral_card}`}>
+          <h3>Referral System:</h3>
+          <p>Earn 10% for direct referrals and 5% for indirect referrals</p>
+          <div className="flex justify-center">
+            <Image src={referralImage} />
+          </div>
+        </div>
+      )}
+      {type === "table" && (
+        <table
+          className={`table-fixed border-spacing-4 ${styles.custom_table}`}
+        >
+          <thead>
+            <tr>
+              <th>ID Number</th>
+              <th>Nickname</th>
+              <th colSpan={2} className={styles.common_header}>
+                Registration Time
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>076854</td>
+              <td>Dave4demi</td>
+              <td className="text-center">08-05-22</td>
+              <td className="text-center">10:40</td>
+            </tr>
+            <tr>
+              <td>076854</td>
+              <td>Dave4demi</td>
+              <td className="text-center">08-05-22</td>
+              <td className="text-center">10:40</td>
+            </tr>
+            <tr>
+              <td>076854</td>
+              <td>Dave4demi</td>
+              <td className="text-center">08-05-22</td>
+              <td className="text-center">10:40</td>
+            </tr>
+            <tr>
+              <td>076854</td>
+              <td>Dave4demi</td>
+              <td className="text-center">08-05-22</td>
+              <td className="text-center">10:40</td>
+            </tr>
+          </tbody>
+        </table>
+      )}
+    </div>
+  );
 };
 
 export default Card;

@@ -1,58 +1,71 @@
 .card {
-	width: 100%;
-	background-color: var(--darkTertiary);
-	padding: 40px;
-	margin: 0 10px 20px 10px;
-	border-radius: 10px;
-	box-shadow: 3px 3px var(--dark);
+  width: 100%;
+  background-color: var(--darkTertiary);
+  padding: 40px;
+  margin: 0 10px 20px 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 30px 2px var(--dark);
 
-	.card_content {
-		.income_section {
-			display: flex;
-			align-items: center;
-			margin: 0 -15px -20px -15px;
+  .card_content {
+    &.referral_card {
+      h3 {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+    }
+    .income_section {
+      display: flex;
+      align-items: center;
+      margin: 0 -15px -20px -15px;
 
-			justify-content: center;
-			.income_content {
-				margin: 0 15px 20px 15px;
-				width: 100%;
-				background-color: var(--darkQuaternary);
-				padding: 20px;
-				border-radius: 10px;
-				box-shadow: 3px 3px var(--darkSecondary);
-			}
-		}
-		button {
-			background-color: var(--blue);
-			color: var(--light);
-			width: 100%;
-			margin: 20px 0px 0px;
-			padding: 10px;
-			border-radius: 10px;
-		}
-	}
-	.custom_table {
-		// border-collapse: collapse;
-		width: 100%;
-		thead {
-			border-bottom: 1px solid var(--darkFont);
-		}
-		th {
-			text-align: left;
-			padding-bottom: 10px;
-		}
-		tr {
-			td {
-				padding: 10px;
-			}
-			&:last-child {
-				border-bottom: 1px solid var(--darkFont);
-				td {
-					padding-bottom: 20px;
-				}
-			}
-		}
-		td {
-		}
-	}
+      justify-content: center;
+      .income_content {
+        margin: 0 15px 20px 15px;
+        width: 100%;
+        background-color: var(--darkQuaternary);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 8px 1px var(--darkSecondary);
+      }
+    }
+    button {
+      background-color: var(--blue);
+      color: var(--light);
+      width: 100%;
+      margin: 20px 0px 0px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+  .custom_table {
+    // border-collapse: collapse;
+    width: 100%;
+    thead {
+      border-bottom: 1px solid var(--darkFont);
+    }
+    th {
+      text-align: left;
+      padding-bottom: 10px;
+      &.common_header {
+        text-align: center;
+      }
+    }
+    tr {
+      td {
+        padding: 10px;
+      }
+      &:last-child {
+        border-bottom: 1px solid var(--darkFont);
+        td {
+          padding-bottom: 20px;
+        }
+      }
+    }
+    td {
+    }
+  }
 }

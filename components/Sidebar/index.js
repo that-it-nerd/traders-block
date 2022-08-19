@@ -22,7 +22,7 @@ const Sidebar = () => {
           Tabs.map((tab, index) => (
             <li
               key={tab.id}
-              className={`flex flex-row ${index === 5 && "active-tab"} `}
+              className={`flex flex-row  ${index === 5 && styles.active_tab} `}
             >
               <Link href="#">
                 <a>
