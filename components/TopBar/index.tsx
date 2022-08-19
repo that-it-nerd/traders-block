@@ -5,9 +5,19 @@ interface User {
   name: string;
   icon: string;
 }
+import Image from "next/image";
+import switch1 from "../../public/images/switch.png";
+import switch2 from "../../public/images/switch-1.png";
+import switch3 from "../../public/images/switch-2.png";
+
 const TopBar = () => {
+  const ISSERVER = typeof window === "undefined";
+  let theme;
+  if (!ISSERVER) {
+    theme = localStorage.getItem("theme");
+  }
   return (
-    <div className={styles.top_bar}>
+    <div className={`${styles.top_bar} ${theme === "light" && styles.light}`}>
       <div className={styles.search_container}>
         <input type="text" />
         <span className={styles.icon}>
@@ -21,15 +31,16 @@ const TopBar = () => {
         <span className={styles.user_image_container}>
           <img className={styles.user_image} src="/images/userImage.png" />
         </span>
-        <span>Username</span>
       </div>
       <div
         onClick={() => {
           const theme = localStorage.getItem("theme");
           localStorage.setItem("theme", theme === "light" ? "dark" : "light");
+          window.location.reload();
         }}
+        className={styles.pointer}
       >
-        Toggle
+        <Image src={theme === "dark" ? switch2 : switch3} layout="fixed" />
       </div>
     </div>
   );

@@ -11,7 +11,14 @@
   justify-content: center;
   align-items: center;
 }
-
+.dark {
+  background: var(--dark) !important;
+  color: var(--darkFont) !important;
+}
+.light {
+  background: var(--light) !important;
+  color: var(--darkFont) !important;
+}
 .footer {
   display: flex;
   flex: 1;

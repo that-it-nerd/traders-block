@@ -8,6 +8,7 @@
     float: right;
     width: 100%;
   }
+
   .page_head {
     margin: 60px 0 20px 10px;
     font-size: 22px;
@@ -31,6 +32,21 @@
         }
         &:last-child {
           margin-left: 10px;
+        }
+      }
+    }
+  }
+  &.light {
+    background-color: var(--lightSecondary);
+    .page_head {
+      color: var(--lightFont);
+    }
+    .pagination {
+      li {
+        color: var(--lightFont) !important;
+        &.active_page {
+          background-color: var(--light);
+          color: var(--darkFont) !important;
         }
       }
     }
