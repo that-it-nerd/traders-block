@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../Cards";
 import DashBoard from "../DashBoard/index";
 import TopBar from "../TopBar";
@@ -14,20 +14,19 @@ interface User {
   icon: string;
 }
 const HeroScreen = () => {
-  const [data, setData] = useState<Data>({
-    name: "John",
-    age: 30,
-  });
   const ISSERVER = typeof window === "undefined";
-  let theme;
+  var theme = "light";
   if (!ISSERVER) {
-    theme = localStorage.getItem("theme");
+    theme = window.localStorage.getItem("theme") || "";
   }
-  console.log("theme", theme);
+  const [color, setColor] = useState<string>("dark");
+  useEffect(() => {
+    setColor(theme);
+  }, []);
   return (
     <div
       className={`basis-5/7 ${styles.heroScreen} ${
-        theme === "light" && styles.light
+        color == "light" ? `${styles.light}` : `${styles.dark}`
       }`}
     >
       <div className={`${styles.nav_bar} flex justify-end`}>

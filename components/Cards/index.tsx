@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./card.module.scss";
 import referralImage from "../../public/images/referral.jpeg";
 import Image from "next/image";
@@ -8,12 +8,20 @@ interface Props {
 }
 const Card: React.FC<Props> = ({ type }) => {
   const ISSERVER = typeof window === "undefined";
-  let theme;
+  var theme = "light";
   if (!ISSERVER) {
-    theme = localStorage.getItem("theme");
+    theme = window.localStorage.getItem("theme") || "";
   }
+  const [color, setColor] = useState<string>("dark");
+  useEffect(() => {
+    setColor(theme);
+  }, []);
   return (
-    <div className={`${styles.card} ${theme === "light" && styles.light}`}>
+    <div
+      className={`${styles.card} ${
+        color == "light" ? `${styles.light}` : `${styles.dark}`
+      }`}
+    >
       {type === "card" && (
         <div className={styles.card_content}>
           <div className={styles.income_section}>

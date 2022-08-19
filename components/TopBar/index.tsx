@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./topBar.module.scss";
 interface User {
   id: number;
@@ -12,12 +12,20 @@ import switch3 from "../../public/images/switch-2.png";
 
 const TopBar = () => {
   const ISSERVER = typeof window === "undefined";
-  let theme;
+  var theme = "light";
   if (!ISSERVER) {
-    theme = localStorage.getItem("theme");
+    theme = window.localStorage.getItem("theme") || "";
   }
+  const [color, setColor] = useState<string>("dark");
+  useEffect(() => {
+    setColor(theme);
+  }, []);
   return (
-    <div className={`${styles.top_bar} ${theme === "light" && styles.light}`}>
+    <div
+      className={`${styles.top_bar} ${
+        color == "light" ? `${styles.light}` : `${styles.dark}`
+      }`}
+    >
       <div className={styles.search_container}>
         <input type="text" />
         <span className={styles.icon}>

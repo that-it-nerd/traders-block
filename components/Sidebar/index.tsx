@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./sidebar.module.scss";
 import Tabs from "../../JSON/Tabs.json";
 import Image from "next/image";
@@ -8,14 +8,18 @@ import brandIcon from "../../public/images/brand.png";
 
 const Sidebar = () => {
   const ISSERVER = typeof window === "undefined";
-  let theme;
+  var theme = "light";
   if (!ISSERVER) {
-    theme = localStorage.getItem("theme");
+    theme = window.localStorage.getItem("theme") || "";
   }
+  const [color, setColor] = useState<string>("dark");
+  useEffect(() => {
+    setColor(theme);
+  }, []);
   return (
     <div
       className={`basis-2/7 sidebar-wrapper  ${styles.sidebar} ${
-        theme === "light" && styles.light
+        color == "light" ? `${styles.light}` : `${styles.dark}`
       }`}
     >
       <div className={`${styles.title_block} `}>
