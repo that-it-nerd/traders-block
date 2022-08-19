@@ -36,7 +36,7 @@ const HeroScreen = () => {
         <h4>My Team</h4>
       </div>
       <div className="rows-1">
-        <div className="columns-1 md:columns-2">
+        <div className="columns-1 lg:columns-2">
           <Card type={"card"} />
           <Card type={"referral"} />
         </div>
