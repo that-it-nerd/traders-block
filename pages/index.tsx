@@ -7,7 +7,12 @@ import Sidebar from "../components/Sidebar/index";
 import HeroScreen from "../components/HeroScreen";
 
 const Home: NextPage = () => {
-  const theme = localStorage.getItem("theme");
+  const ISSERVER = typeof window === "undefined";
+  let theme;
+  if (!ISSERVER) {
+    theme=localStorage.getItem("theme")
+  }
+  // const theme = localStorage.getItem("theme");
   return (
     <div className={`main-wrapper flex flex-row ${theme}`}>
       <Sidebar />
