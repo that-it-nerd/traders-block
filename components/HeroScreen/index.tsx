@@ -36,9 +36,11 @@ const HeroScreen = () => {
       <div className={styles.page_head}>
         <h4>My Team</h4>
       </div>
-      <div className={`flex justify-start items-center`}>
-        <Card type={"card"} />
-        <Card type={"referral"} />
+      <div className="rows-1">
+        <div className="columns-1 md:columns-2">
+          <Card type={"card"} />
+          <Card type={"referral"} />
+        </div>
       </div>
       <div className={`flex justify-start items-center`}>
         <Card type={"table"} />

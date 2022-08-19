@@ -8,7 +8,7 @@ import HeroScreen from "../components/HeroScreen";
 
 const Home: NextPage = () => {
   const ISSERVER = typeof window === "undefined";
-  let theme;
+  var theme;
   if (!ISSERVER) {
     theme = localStorage.getItem("theme");
   }
