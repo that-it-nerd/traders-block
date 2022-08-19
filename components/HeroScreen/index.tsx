@@ -33,6 +33,15 @@ const HeroScreen = () => {
       <div className={`flex justify-start items-center`}>
         <Card type={"table"} />
       </div>
+      <div className={`flex justify-center ${styles.pagination}`}>
+        <ul className="flex justify-between">
+          <li>Prev</li>
+          <li className={`${styles.active_page} `}>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>Next</li>
+        </ul>
+      </div>
       {/* <DashBoard data={data} setData={setData} /> */}
     </div>
   );

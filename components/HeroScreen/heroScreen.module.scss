@@ -13,4 +13,26 @@
     font-size: 22px;
     font-weight: 800;
   }
+
+  .pagination {
+    ul {
+      li {
+        text-align: center;
+        font-weight: 600;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        border-radius: 50%;
+        &.active_page {
+          background-color: var(--blue);
+        }
+        &:first-child {
+          margin-right: 30px;
+        }
+        &:last-child {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
 }

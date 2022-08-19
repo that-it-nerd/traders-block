@@ -7,18 +7,11 @@ import Sidebar from "../components/Sidebar/index";
 import HeroScreen from "../components/HeroScreen";
 
 const Home: NextPage = () => {
-  const [toggle, setToggle] = useState<boolean>(true);
+  const theme = localStorage.getItem("theme");
   return (
-    <div className={`main-wrapper flex flex-row ${toggle ? "dark" : "light"}`}>
+    <div className={`main-wrapper flex flex-row ${theme}`}>
       <Sidebar />
       <HeroScreen />
-      <div
-        onClick={() => {
-          setToggle(!toggle);
-        }}
-      >
-        Toggle
-      </div>
     </div>
   );
 };
