@@ -11,6 +11,9 @@
         background-color: #dee5ed;
       }
     }
+    img {
+      filter: invert(0)!important;
+    }
   }
   .search_container {
     position: relative;
