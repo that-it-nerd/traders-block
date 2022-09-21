@@ -19,7 +19,7 @@ const Home: NextPage = () => {
   return (
     <div
       className={`main-wrapper flex flex-row ${
-        color == "light" ? `${styles.light}` : `${styles.dark}`
+        color == "light" ? `${styles.light}` : `${styles.dark} `
       }`}
     >
       <Sidebar />
